@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coco Quizon — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --dark: #222;
+    --mid: #555;
+    --light: #888;
+    --pale: #bbb;
+    --icon: #999;
+    --sans: 'Hanken Grotesk', sans-serif;
+    --serif: 'Newsreader', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @media print {
+    @page { size: letter; margin: 0.55in 0.7in; }
+    body { background: white; }
+    .page { max-width: none; padding: 0; box-shadow: none; }
+  }
+
+  body {
+    font-family: var(--sans);
+    background: #e8e8e8;
+    color: var(--black);
+    font-size: 13.5px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 8.5in;
+    margin: 40px auto;
+    background: white;
+    padding: 0.55in 0.7in;
+    box-shadow: 0 1px 40px rgba(0,0,0,0.08);
+  }
+
+  /* === HEADER === */
+  header { margin-bottom: 22px; }
+
+  h1 {
+    font-family: var(--sans);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 14px;
+  }
+
+  /* === CONTACT BAR === */
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--dark);
+    letter-spacing: 0.015em;
+    padding: 12px 0;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .contact-item svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    color: var(--icon);
+  }
+
+  /* === SUMMARY === */
+  .summary {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--dark);
+    margin: 14px 0 6px;
+    font-style: italic;
+  }
+
+  /* === SECTIONS === */
+  .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-top: 22px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--pale), transparent);
+  }
+
+  /* === JOB BLOCKS === */
+  .job { margin-bottom: 14px; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+
+  .job-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--black);
+  }
+
+  .job-date {
+    font-size: 12px;
+    color: var(--light);
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: 12px;
+    letter-spacing: 0.02em;
+  }
+
+  .job-org {
+    font-size: 13px;
+    color: var(--dark);
+    margin-bottom: 3px;
+  }
+
+  .job-desc {
+    font-family: var(--serif);
+    font-size: 12.5px;
+    font-style: italic;
+    color: var(--mid);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+
+  /* === ACHIEVEMENTS === */
+  .achievements { list-style: none; padding: 0; }
+
+  .achievements li {
+    padding-left: 16px;
+    position: relative;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+
+  .achievements li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--pale);
+    font-weight: 400;
+  }
+
+  /* === EARLIER ROLES === */
+  .earlier-roles .role {
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 1.45;
+    padding-left: 16px;
+  }
+
+  .earlier-roles .role strong {
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  .earlier-roles .role .company {
+    color: var(--dark);
+  }
+
+  .earlier-roles .role .role-desc {
+    color: var(--mid);
+    font-size: 12.5px;
+  }
+
+  /* === EDUCATION === */
+  .edu-line {
+    font-size: 13.5px;
+    color: var(--dark);
+    margin-bottom: 2px;
+  }
+
+  .edu-line strong {
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  /* === SKILLS === */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 3px 14px;
+    font-size: 12.5px;
+  }
+
+  .skills-grid dt {
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  .skills-grid dd {
+    color: var(--mid);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Coco Quizon</h1>
+    <div class="contact">
+      <span class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Glendale, CA
+      </span>
+      <span class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        (747) 331-0544
+      </span>
+      <span class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        quizonn@gmail.com
+      </span>
+      <span class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+        cocoquizon.com
+      </span>
+    </div>
+  </header>
+
+  <p class="summary">Brand marketing professional with over 15 years of experience in retail, brand management, marketing, PR, and product development. Skilled at operationalizing strategies to drive revenue through engaged communities, insight-driven product and merchandising decisions, and high-quality creative execution from concept to delivery.</p>
+
+  <div class="section-title">Experience</div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Marketing Director</span>
+      <span class="job-date">Jan 2024 – Present</span>
+    </div>
+    <div class="job-org">Fashion Brand Company, Los Angeles, CA</div>
+    <div class="job-desc">Working across creative production, content, copy, marketing operations, product, and web for an artist-driven, seasonless, slow fashion brand by Penelope Gazin.</div>
+    <ul class="achievements">
+      <li>Grew email, TikTok, and Pinterest audiences by 40% in eight months; expanded new customer base by 34% and increased average basket size by 20% within one year</li>
+      <li>Maintain a 56% email open rate with $0.58 per-reader return through strategic copywriting and Klaviyo campaign optimization</li>
+      <li>Line-produced branded short films starring John C. Reilly, Tim Robinson, and Anna Seregina</li>
+      <li>Manage end-to-end creative operations: content creation, graphic design, ad buying via Meta Business Suite, video production, influencer coordination, and press outreach</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Owner & Director</span>
+      <span class="job-date">2021 – 2023</span>
+    </div>
+    <div class="job-org">Girl Group Communications, Manila, PH</div>
+    <div class="job-desc">Built a boutique communications consultancy taking D2C and specialty brands in food & beverage, K-beauty, and lifestyle from pre-launch through their first six months, specializing in owned and marketplace e-commerce.</div>
+    <ul class="achievements">
+      <li>Created a seasonal digital campaign for Dear Klairs (K-beauty) that delivered their most significant sales day on record through localized assets, influencer partnerships, and content marketing</li>
+      <li>Relaunched a hospitality concept on social media, growing the account to 17,000 followers in three months on a $100/month budget while consistently exceeding sales targets</li>
+      <li>Produced a private shopping activation for TOQA that led to their highest-grossing sales month and expanded international presence through showroom partnerships</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Business Director, PR</span>
+      <span class="job-date">2020</span>
+    </div>
+    <div class="job-org">Ogilvy, Manila, PH</div>
+    <div class="job-desc">Created PR and influencer campaigns for Unilever's personal care and food services portfolio in a part-strategist, part-suit capacity, delivering high-converting creative campaigns from start to finish.</div>
+    <ul class="achievements">
+      <li>Led the PR department servicing Unilever's personal care portfolio (Dove, Pond's, Axe, Rexona, Lady's Choice), managing client budgets and departmental P&L in collaboration with the CEO</li>
+      <li>Created an influencer-led, all-digital campaign that successfully relaunched a heritage personal care brand to attract a younger demographic</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Group Brand Manager, Eyewear</span>
+      <span class="job-date">2017 – 2020</span>
+    </div>
+    <div class="job-org">Sunnies Inc., Manila, PH</div>
+    <div class="job-desc">Worked directly under the founders of Asia's leading sun and optical eyewear provider, creating overall strategy for multi-year marketing campaigns across web, in-store, and creative activations, executing in tandem with operations and finance.</div>
+    <ul class="achievements">
+      <li>Grew the eyewear portfolio to record profits of USD 20M; liquidated 50% of aged inventory in six months and improved sell-through rates from 1% to 5% within one quarter</li>
+      <li>Built the optical brand's social media from 46K to 129K followers in six months by establishing a cohesive brand voice</li>
+      <li>Led Hotel Sunnies, a multi-day fan activation generating $600K in media value on a $20K spend; launched first stores in Vietnam</li>
+      <li>Managed a cross-functional team of 30 across marketing, creative, PR, business development, and product</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Earlier Roles</span>
+      <span class="job-date">2010 – 2017</span>
+    </div>
+    <div class="earlier-roles">
+      <div class="role"><strong>Online Strategy & Development Manager</strong><span class="company">, Bridges PR</span> <span class="role-desc">— Established a digital PR arm for omnichannel campaigns across publications, blogs, and influencers. Clients included Uber, Magnum, Ponds, and Mountain Dew.</span></div>
+      <div class="role"><strong>Brand & Production Manager</strong><span class="company">, VS Group</span> <span class="role-desc">— Managed marketing, merchandising, and export production for a multi-brand streetwear and lifestyle boutique.</span></div>
+      <div class="role"><strong>Area Manager</strong><span class="company">, Prime Athletic</span> <span class="role-desc">— In-store sales manager for a specialty boutique carrying Fred Perry, Nike Sportswear, Karen Walker, and Levi's Vintage Clothing.</span></div>
+    </div>
+  </div>
+
+  <div class="section-title">Education</div>
+  <p class="edu-line"><strong>BA in Cultural Anthropology & Applied Linguistics</strong> — The University of Melbourne</p>
+
+  <div class="section-title">Technical Skills</div>
+  <dl class="skills-grid">
+    <dt>Creative</dt>
+    <dd>Photoshop, Premiere Pro, Illustrator, Lightroom, InDesign, Figma, Canva, Blender</dd>
+    <dt>Platforms</dt>
+    <dd>Shopify Plus, Klaviyo, Meta Business Suite, Google Ads, Gorgias, WordPress, Squarespace, Cargo</dd>
+    <dt>Productivity</dt>
+    <dd>Notion, Asana, Google Workspace, Microsoft Office, QuickBooks, Sprout</dd>
+  </dl>
+
+</div>
+</body>
+</html>
